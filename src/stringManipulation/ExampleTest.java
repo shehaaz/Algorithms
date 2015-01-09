@@ -22,7 +22,33 @@ public class ExampleTest {
 		assertTrue("result: " + result + " output: " + output, result.equals(output));
 		
 		String test = "Madam, I'm Adam";
+		System.out.println("testReverseStringDivideAndConquer()");
 		System.out.println(test + " : " + Example.reverseStringDivideAndConquer(test));
+	}
+	
+	@Test
+	public void testAnagramCheckerTrue(){
+		System.out.println("testAnagramCheckerTrue()");
+		
+		String input = "laval";
+		assertTrue(Example.anagramChecker(input));
+	}
+	
+	@Test
+	public void testAnagramCheckerFalse(){
+		System.out.println("testAnagramCheckerFalse()");
+		
+		String input = "lav";
+		assertFalse(Example.anagramChecker(input));
+		
+	}
+	
+	@Test
+	public void testAnagramCheckerEdgeCase(){
+		System.out.println("testAnagramCheckerEdgeCase()");
+				
+		String input = "LAVaL";
+		assertTrue(Example.anagramChecker(input));
 	}
 
 }
