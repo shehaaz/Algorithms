@@ -20,6 +20,9 @@ public class ExampleTest {
 		String output = Example.reverseStringDivideAndConquer(input);
 		String result = "elpmaxe";
 		assertTrue("result: " + result + " output: " + output, result.equals(output));
+		
+		String test = "Madam, I'm Adam";
+		System.out.println(test + " : " + Example.reverseStringDivideAndConquer(test));
 	}
 
 }

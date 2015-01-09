@@ -3,7 +3,7 @@ package stringManipulation;
 
 public class Example {
 
-	protected static String reverseString(String s) {
+	static String reverseString(String s) {
 		
 		String result = "";
 		
@@ -14,7 +14,7 @@ public class Example {
 		return result;
 	}
 	
-	protected static String reverseStringDivideAndConquer(String s){
+	static String reverseStringDivideAndConquer(String s){
 		
 		char[] result = new char[s.length()];
 		int lastIndex = s.length() - 1;
@@ -26,5 +26,7 @@ public class Example {
 		
 		return new String(result);
 	}
+	
+	static String 
 
 }

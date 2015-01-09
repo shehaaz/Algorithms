@@ -7,8 +7,6 @@ Algorithms in Java.
 
 # Awesome Resources
 
-These links are very Google focused, but GOOD companies recruit like Google :)
-
 ## Problems and blog posts
 * https://sites.google.com/site/steveyegge2/five-essential-phone-screen-questions
 * http://www.dsalgo.com/2013/02/index.php.html?m=1
@@ -27,4 +25,7 @@ These links are very Google focused, but GOOD companies recruit like Google :)
 * https://github.com/kasaquan/book/blob/master/Robert%20Sedgewick%20and%20Kevin%20Wayne%20-%20Algorithms,%204th%20edition.pdf
 * http://greenteapress.com/complexity/thinkcomplexity.pdf
 * http://larc.unt.edu/ian/books/free/poa.pdf
+
+## Controlling Access to Members of a Class
+![](http://i.imgur.com/6CPMyGY.png)
 
