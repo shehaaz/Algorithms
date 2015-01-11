@@ -70,6 +70,18 @@ public class ExampleTest {
 	}
 	
 	@Test
+	public void testLongestPalindromLengthFour()
+	{
+		assertTrue(Example.longestPalindromInsideString("jzaazx").equals("zaaz"));
+	}
+	
+	@Test
+	public void testLongestPalindromRaceCar()
+	{
+		assertTrue(Example.longestPalindromInsideString("RaceCar").equals("RaceCar"));
+	}
+	
+	@Test
 	public void testLongestPalindromSmallerPalindromInside()
 	{
 		assertTrue(Example.longestPalindromInsideString("Laval").equals("Laval"));
