@@ -5,7 +5,7 @@ Algorithms in Java.
 
 1. String Manipulation
   * reverseString
-  * Find the longest palindrom in a String
+  * Find the longest palindrome in a String
 
 # Awesome Resources
 
