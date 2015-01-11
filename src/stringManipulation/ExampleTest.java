@@ -31,7 +31,7 @@ public class ExampleTest {
 		System.out.println("testAnagramCheckerTrue()");
 		
 		String input = "laval";
-		assertTrue(Example.anagramChecker(input));
+		assertTrue(Example.palindromeChecker(input));
 	}
 	
 	@Test
@@ -39,7 +39,7 @@ public class ExampleTest {
 		System.out.println("testAnagramCheckerFalse()");
 		
 		String input = "lav";
-		assertFalse(Example.anagramChecker(input));
+		assertFalse(Example.palindromeChecker(input));
 		
 	}
 	
@@ -48,7 +48,38 @@ public class ExampleTest {
 		System.out.println("testAnagramCheckerEdgeCase()");
 				
 		String input = "LAVaL";
-		assertTrue(Example.anagramChecker(input));
+		assertTrue(Example.palindromeChecker(input));
+	}
+	
+	@Test
+	public void testpChecker()
+	{
+		assertTrue(Example.getLongestPalindromeFromBeginning("zaazl").equals("zaaz"));
+	}
+	
+	@Test
+	public void testpCheckerNone()
+	{
+		assertTrue(Example.getLongestPalindromeFromBeginning("zl").equals(""));
+	}
+	
+	@Test
+	public void testLongestPalindrom()
+	{
+		assertTrue(Example.longestPalindromInsideString("jzAdax").equals("Ada"));
+	}
+	
+	@Test
+	public void testLongestPalindromSmallerPalindromInside()
+	{
+		assertTrue(Example.longestPalindromInsideString("Laval").equals("Laval"));
+	}
+	
+	@Test
+	public void testLongestPalindromNoPalindromInside()
+	{
+		assertTrue(Example.longestPalindromInsideString("example").isEmpty());
+		
 	}
 
 }
