@@ -31,7 +31,7 @@ public class Example {
 	//Q1: Find the longest palindrom in a String
 	/**
 	 * Find the longest palindrome in a String. The palindrome can be contained inside the String
-	 * 
+	 * Return Empty String if none
 	 * @param s
 	 * @return
 	 */
