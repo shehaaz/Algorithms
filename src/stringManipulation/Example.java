@@ -27,41 +27,6 @@ public class Example {
 		return new String(result);
 	}
 	
-	/**
-	 * 
-	 * @param String s
-	 * @return boolean
-	 * 
-	 * LAVVAL
-	 * 
-	 * lastIndex = 4
-	 * 
-	 * s.length()/2 = 3
-	 * 
-	 * 0: L != L -> false 
-	 * 1: A != A -> false
-	 * 2: V != V -> false
-	 * 
-	 * result: true
-	 */
-	static boolean palindromeChecker(String s)
-	{
-		//convert the string to lowerCase
-		s = s.toLowerCase();
-		
-		int lastIndex = s.length() - 1;
-		
-		for(int i=0; i<s.length()/2; i++)
-		{
-			//System.out.println("comparing: " + s.charAt(i) + " AND " + s.charAt(lastIndex - i));
-			if(s.charAt(i) != s.charAt(lastIndex - i))
-			{
-				return false;
-			}
-		}
-		return true;
-	}
-	
 	
 	//Q1: Find the longest palindrom in a String
 	/**
@@ -106,6 +71,41 @@ public class Example {
 			return s;
 		}
 		return getLongestPalindromeFromBeginning(s.substring(0, s.length()-1));
+	}
+	
+	/**
+	 * 
+	 * @param String s
+	 * @return boolean
+	 * 
+	 * LAVVAL
+	 * 
+	 * lastIndex = 4
+	 * 
+	 * s.length()/2 = 3
+	 * 
+	 * 0: L != L -> false 
+	 * 1: A != A -> false
+	 * 2: V != V -> false
+	 * 
+	 * result: true
+	 */
+	static boolean palindromeChecker(String s)
+	{
+		//convert the string to lowerCase
+		s = s.toLowerCase();
+		
+		int lastIndex = s.length() - 1;
+		
+		for(int i=0; i<s.length()/2; i++)
+		{
+			//System.out.println("comparing: " + s.charAt(i) + " AND " + s.charAt(lastIndex - i));
+			if(s.charAt(i) != s.charAt(lastIndex - i))
+			{
+				return false;
+			}
+		}
+		return true;
 	}
 	
 	
