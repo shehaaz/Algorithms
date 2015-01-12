@@ -29,5 +29,37 @@ public class Example {
 
 		return result;
 	}
+	
+	/***
+	 * Binary Search: Divide and conquer search for an element in an array
+	 * returns index of the element or -1 if it doesn't exist;
+	 */
+	static int binarySearch(int[] a, int value)
+	{
+		int lowIndex = 0;
+		int highIndex = a.length - 1;
+		int result = -1;
+		
+		while (lowIndex <= highIndex)
+		{
+			int middleIndex = (lowIndex + highIndex)/2;
+			
+			if(value == a[middleIndex])
+			{
+				result = middleIndex;
+				break;
+			}
+			else if(value > a[middleIndex])
+			{
+				lowIndex = middleIndex + 1;
+			}
+			else if(value < a[middleIndex])
+			{
+				highIndex = middleIndex - 1;
+			}
+		}
+		
+		return result;
+	}
 
 }

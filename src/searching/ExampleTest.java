@@ -29,5 +29,25 @@ public class ExampleTest {
 		
 		assertTrue("expected: " + result, result.equals("NONE"));
 	}
+	
+	@Test
+	public void testBinarySearch()
+	{
+		int[] intArray = {1,2,3,4,5,6,7,8,9,10};
+		int target = 9;
+		int targetIndex = Example.binarySearch(intArray, target);
+		
+		assertTrue(8 == targetIndex);
+	}
+	
+	@Test
+	public void testBinarySearchNone()
+	{
+		int[] intArray = {1,2,3,4,5,6,7,8,9,10};
+		int target = 11;
+		int targetIndex = Example.binarySearch(intArray, target);
+		
+		assertTrue(-1 == targetIndex);
+	}
 
 }
