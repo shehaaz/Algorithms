@@ -28,6 +28,7 @@ Algorithms in Java.
 * https://github.com/kasaquan/book/blob/master/Robert%20Sedgewick%20and%20Kevin%20Wayne%20-%20Algorithms,%204th%20edition.pdf
 * http://greenteapress.com/complexity/thinkcomplexity.pdf
 * http://larc.unt.edu/ian/books/free/poa.pdf
+* [Data Structures and Algorithms in Java](http://rineshpk.weebly.com/uploads/1/8/2/0/1820991/data_structures_and_algorithms_in_javatqw_darksiderg.pdf)
 
 ## Controlling Access to Members of a Class
 ![](http://i.imgur.com/6CPMyGY.png)
