@@ -74,6 +74,13 @@ public class Example {
 	static int[] twoSum(int[] a, int target)
 	{
 		int[] result = new int[2];
+		/*
+		 * We only have to iterate once through the list. Use a map to remember the value and get to its index+1
+		 * Key=integer value
+		 * value=index+1
+		 * 
+		 */
+		
 		Map<Integer, Integer> memo = new LinkedHashMap<Integer,Integer>();
 		
 		for(int i=0; i<a.length; i++)
