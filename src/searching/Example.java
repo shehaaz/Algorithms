@@ -1,5 +1,8 @@
 package searching;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 public class Example {
 	
 	/**
@@ -31,7 +34,7 @@ public class Example {
 	}
 	
 	/***
-	 * Binary Search: Divide and conquer search for an element in an array
+	 * Binary Search: Divide and conquer search for an element in a sorted array
 	 * returns index of the element or -1 if it doesn't exist;
 	 */
 	static int binarySearch(int[] a, int value)
@@ -61,5 +64,41 @@ public class Example {
 		
 		return result;
 	}
+	
+	/**
+	 * write a function that takes in an int[] and int target
+	 * returns non-zero based index of two ints in the array that add up to int target
+	 * {2,7,11,1} 18 -> [2,3]
+	 */
+	
+	static int[] twoSum(int[] a, int target)
+	{
+		int[] result = new int[2];
+		Map<Integer, Integer> memo = new LinkedHashMap<Integer,Integer>();
+		
+		for(int i=0; i<a.length; i++)
+		{
+			if(a[i] < target)
+			{
+				memo.put(a[i], i+1);
+			}
+		}
+		
+		for(int key : memo.keySet())
+		{
+			int first = key;
+			int second = target - first;
+			
+			if(memo.get(second) != null)
+			{
+				result[0] = memo.get(first);
+				result[1] = memo.get(second);
+				break;
+			}
+		}
+		return result;
+	}
+	
+	
 
 }

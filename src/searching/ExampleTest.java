@@ -2,6 +2,8 @@ package searching;
 
 import static org.junit.Assert.*;
 
+import java.util.Arrays;
+
 import org.junit.Test;
 
 public class ExampleTest {
@@ -48,6 +50,16 @@ public class ExampleTest {
 		int targetIndex = Example.binarySearch(intArray, target);
 		
 		assertTrue(-1 == targetIndex);
+	}
+	
+	@Test
+	public void testTwoSum()
+	{
+		int[] a = {2,7,11,1};
+		int target = 18;
+		int [] result = Example.twoSum(a, target);
+		int[] expected = {2,3};
+		Arrays.equals(expected, result);
 	}
 
 }
