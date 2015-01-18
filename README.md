@@ -30,7 +30,7 @@ Algorithms in Java.
 * [LeetCodeOJ Problems](https://oj.leetcode.com/problemset/algorithms/)
 * [LeetCode Solutions](http://www.programcreek.com/category/java-2/algorithms/)
 * [Blog post on failing Google Interviews](http://alexbowe.com/failing-at-google-interviews/)
-* (Quora Question](https://www.quora.com/What-should-I-expect-in-a-Software-Engineer-interview-at-Google-and-how-should-I-prepare?srid=vhu&share=1)
+* [Quora Question](https://www.quora.com/What-should-I-expect-in-a-Software-Engineer-interview-at-Google-and-how-should-I-prepare?srid=vhu&share=1)
 * [Hacking G+ Interview](http://courses.csail.mit.edu/iap/interview/materials.php)
 * [Goog hiring process](https://www.google.ca/about/careers/lifeatgoogle/hiringprocess/)
 * [Top 15 data structures and Algo questions](http://javarevisited.blogspot.ca/2013/03/top-15-data-structures-algorithm-interview-questions-answers-java-programming.html)
@@ -41,7 +41,7 @@ Algorithms in Java.
 * [Project Euler](https://projecteuler.net)
 
 ## Books
-[Algorithms Sedgewick](https://github.com/kasaquan/book/blob/master/Robert%20Sedgewick%20and%20Kevin%20Wayne%20-%20Algorithms,%204th%20edition.pdf)
+* [Algorithms Sedgewick](https://github.com/kasaquan/book/blob/master/Robert%20Sedgewick%20and%20Kevin%20Wayne%20-%20Algorithms,%204th%20edition.pdf)
 * [Think Complexity](http://greenteapress.com/complexity/thinkcomplexity.pdf)
 * [Data Structures and Algorithms in Java](http://rineshpk.weebly.com/uploads/1/8/2/0/1820991/data_structures_and_algorithms_in_javatqw_darksiderg.pdf)
 
