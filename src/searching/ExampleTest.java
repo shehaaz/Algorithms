@@ -56,7 +56,6 @@ public class ExampleTest {
 	public void testTwoSum()
 	{
 		int[] a = {16,7,1,11};
-		//Hashmap: 2->1;7->2;11->3;1->4 
 		int target = 18;
 		int [] result = Example.twoSum(a, target);
 		int[] expected = {2,4};
