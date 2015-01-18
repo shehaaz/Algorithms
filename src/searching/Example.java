@@ -118,4 +118,38 @@ public class Example {
 		
 		return result;
 	}
+	
+	/**
+	 * Football scores question
+	 * 30 -> 7,7,7,7,2
+	 */
+	
+	/**
+	 * Algorithm to verify whether a number is prime or not  
+	 */
+	
+	/**
+	 * Fibonacci recursive algorithm
+	 * 0,1,1,2,3,5,8,...
+	 * fib(-1) = 0
+	 * fib(0) = 0
+	 * fib(1) = 1
+	 */
+	static int fibonacci(int n)
+	{
+		//base case
+		if(n==0 || n<0)
+		{
+			return 0;
+		}
+		if(n==1)
+		{
+			return 1;
+		}
+		//step case: two previous numbers give you n
+		return fibonacci(n-2) + fibonacci(n-1);
+	}
+	
+	
+	
 }

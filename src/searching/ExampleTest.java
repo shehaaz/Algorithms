@@ -101,5 +101,18 @@ public class ExampleTest {
 		int[] expected = {0,0};
 		assertTrue(Arrays.equals(expected, result));
 	}
+	
+	@Test
+	public void testfibonacci()
+	{
+		int fib = Example.fibonacci(7);
+		assertTrue(fib==13);
+		
+		fib = Example.fibonacci(-7);
+		assertTrue(fib==0);
+		
+		fib = Example.fibonacci(36);
+		assertTrue(fib==14930352);
+	}
 
 }

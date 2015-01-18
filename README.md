@@ -10,6 +10,7 @@ Algorithms in Java.
 	* linearSearch
 	* binarySearch
 	* twoSum e.g: Input: {2,7,11,1} 18 -> Output: [2,3]
+	* Fibonacci Recursively
 
 3. Sorting
 	* bubbleSort	 	
