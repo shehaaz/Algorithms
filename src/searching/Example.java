@@ -1,7 +1,11 @@
 package searching;
 
-import java.util.LinkedHashMap;
+import java.util.HashMap;
 import java.util.Map;
+
+import graphs.Tree;
+import graphs.Tree.Node;
+
 
 public class Example {
 	
@@ -74,38 +78,44 @@ public class Example {
 	static int[] twoSum(int[] a, int target)
 	{
 		int[] result = new int[2];
-		/*
-		 * We only have to iterate once through the list. Use a map to remember the value and get to its index+1
-		 * Key=integer value
-		 * value=index+1
-		 * 
-		 */
-		
-		Map<Integer, Integer> memo = new LinkedHashMap<Integer,Integer>();
-		
+		Tree tree = new Tree();
+
 		for(int i=0; i<a.length; i++)
 		{
-			if(a[i] < target)
+			if(a[i] <= target)
 			{
-				memo.put(a[i], i+1);
+				tree.insert(a[i], i+1);
 			}
 		}
 		
-		for(int key : memo.keySet())
+		Node current = tree.getRoot();
+		
+		for(Node node1 : tree.getKeyList())
 		{
-			int first = key;
-			int second = target - first;
-			
-			if(memo.get(second) != null)
+			if(node1.getKey() < current.getKey())
 			{
-				result[0] = memo.get(first);
-				result[1] = memo.get(second);
-				break;
+				current = current.getLeftChild();
+			}
+			else
+			{
+				current = current.getRightChild();
+			}
+			if(current != null)
+			{
+				Node node2 = tree.find(current, target-node1.getKey());
+				
+				if(node2 != null)
+				{
+					result[0] = node1.getValue();
+					result[1] = node2.getValue();
+					return result;
+				}
+			}
+			else
+			{
+				return result;
 			}
 		}
 		return result;
 	}
-	
-	
-
 }

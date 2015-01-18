@@ -56,10 +56,41 @@ public class ExampleTest {
 	public void testTwoSum()
 	{
 		int[] a = {2,7,11,1};
+		//Hashmap: 2->1;7->2;11->3;1->4 
 		int target = 18;
 		int [] result = Example.twoSum(a, target);
 		int[] expected = {2,3};
-		Arrays.equals(expected, result);
+		assertTrue(Arrays.equals(expected, result));
+	}
+	
+	@Test
+	public void testTwoSumSameValues1()
+	{
+		int[] a = {0,4,3,0};
+		int target = 0;
+		int [] result = Example.twoSum(a, target);
+		int[] expected = {1,4};
+		assertTrue(Arrays.equals(expected, result));
+	}
+	
+	@Test
+	public void testTwoSumSameValues2()
+	{
+		int[] a = {3,4,3,0};
+		int target = 6;
+		int [] result = Example.twoSum(a, target);
+		int[] expected = {1,3};
+		assertTrue(Arrays.equals(expected, result));
+	}
+	
+	@Test
+	public void testTwoSumSameNone()
+	{
+		int[] a = {3,4,3,0};
+		int target = 8;
+		int [] result = Example.twoSum(a, target);
+		int[] expected = {0,0};
+		assertTrue(Arrays.equals(expected, result));
 	}
 
 }
