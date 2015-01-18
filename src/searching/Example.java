@@ -89,33 +89,33 @@ public class Example {
 		}
 		
 		Node current = tree.getRoot();
+		Node node1;
+		Node node2;
 		
-		for(Node node1 : tree.getKeyList())
+		while(current != null)
 		{
-			if(node1.getKey() < current.getKey())
+			node1 = current;
+			int diff = target-node1.getKey();
+			
+			if(diff < current.getKey())
 			{
 				current = current.getLeftChild();
+				node2 = tree.find(current, diff);
 			}
 			else
 			{
 				current = current.getRightChild();
+				node2 = tree.find(current, diff);
 			}
-			if(current != null)
+			
+			if(node2 != null)
 			{
-				Node node2 = tree.find(current, target-node1.getKey());
-				
-				if(node2 != null)
-				{
-					result[0] = node1.getValue();
-					result[1] = node2.getValue();
-					return result;
-				}
-			}
-			else
-			{
-				return result;
+				result[0] = node1.getValue();
+				result[1] = node2.getValue();
+				break;
 			}
 		}
+		
 		return result;
 	}
 }

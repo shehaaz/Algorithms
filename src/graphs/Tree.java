@@ -5,7 +5,6 @@ import java.util.ArrayList;
 public class Tree {
 	
 	private Node root;
-	private ArrayList<Node> keyList = new ArrayList<Node>();
 	
 	public Tree()
 	{
@@ -15,7 +14,6 @@ public class Tree {
 	public void insert(int key, int value)
 	{
 		Node newNode = new Node(key, value);
-		keyList.add(newNode);
 		
 		if(root == null)
 		{
@@ -93,11 +91,6 @@ public class Tree {
 		}
 
 		return parent;
-	}
-	
-	public ArrayList<Node> getKeyList()
-	{
-		return keyList;
 	}
 	
 	public class Node

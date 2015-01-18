@@ -55,11 +55,21 @@ public class ExampleTest {
 	@Test
 	public void testTwoSum()
 	{
-		int[] a = {2,7,11,1};
+		int[] a = {16,7,1,11};
 		//Hashmap: 2->1;7->2;11->3;1->4 
 		int target = 18;
 		int [] result = Example.twoSum(a, target);
-		int[] expected = {2,3};
+		int[] expected = {2,4};
+		assertTrue(Arrays.equals(expected, result));
+	}
+	
+	@Test
+	public void testTwoSumLongList()
+	{
+		int[] a = {16,7,1,11,3};
+		int target = 19;
+		int [] result = Example.twoSum(a, target);
+		int[] expected = {1,5};
 		assertTrue(Arrays.equals(expected, result));
 	}
 	
