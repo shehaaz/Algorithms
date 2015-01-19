@@ -48,6 +48,12 @@ Algorithms in Java.
 ## Controlling Access to Members of a Class
 ![](http://i.imgur.com/6CPMyGY.png)
 
+
+#LinkedList
+* Arrays disadvantage: in an un-ordered array searching is slow and in an ordered array insertion is slow. Deletion is slow for un-ordered and ordered arrays. Also, the size of the array can't be changed after it's created.
+* Linked List solves this problem.
+* Linked Lists replace arrays as the basis structure for stacks and queues. That is why for the LRU Cache we use a linked list. If fact, you can use a linked list in many cases in which you would use an array, unless you need **frequent random access** to individual items using an index.
+
 ##Trees
 * Provide both quick insertion and deletion of a linked list, and also the quick searching of an ordered array.
 * A tree is actually an instance of a more general category called a graph
