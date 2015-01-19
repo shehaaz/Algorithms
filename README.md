@@ -54,6 +54,43 @@ Algorithms in Java.
 * Linked List solves this problem.
 * Linked Lists replace arrays as the basis structure for stacks and queues. That is why for the LRU Cache we use a linked list. If fact, you can use a linked list in many cases in which you would use an array, unless you need **frequent random access** to individual items using an index.
 
+```java
+class Link
+{
+ public int data;
+ public Link next;
+}
+
+class LinkList
+{
+ private Link head;
+ 
+ public void LinkList()
+ {
+  head = null;
+ }
+ 
+ public  boolean isEmpty()
+ {
+  return (first==null);
+ }
+ 
+ public void insertFirst(Link newLink)
+ {
+    newLink.next = head;
+    head = newLink;
+ }
+ 
+ public Link deleteFirst()
+ {
+  Link tmp = head;
+  head = head.next;
+  return tmp;
+}
+```
+
+
+
 ##Trees
 * Provide both quick insertion and deletion of a linked list, and also the quick searching of an ordered array.
 * A tree is actually an instance of a more general category called a graph
