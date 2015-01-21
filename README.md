@@ -59,6 +59,11 @@ class Link
 {
  public int data;
  public Link next;
+ 
+  public Link(int data)
+  {
+   this.data = data;
+  }
 }
 
 class LinkList
@@ -75,8 +80,9 @@ class LinkList
   return (first==null);
  }
  
- public void insertFirst(Link newLink)
+ public void insertFirst(int data)
  {
+    Link newLink = new Link(data);	
     newLink.next = head;
     head = newLink;
  }
@@ -86,7 +92,50 @@ class LinkList
   Link tmp = head;
   head = head.next;
   return tmp;
-}
+ }
+ 
+ public Link find(int key)
+ {
+  Link current = null;
+  if(!this.isEmpty())
+  {
+   current = this.head;
+   while(current.data != key)
+   {
+    if(current.next == null)
+      return null;
+    else
+     current = current.next;
+   }
+  return current;
+  }
+ }
+ 
+ public Link delete(int key)
+ {
+   //previous and current have a reference to the Head
+   Link previous = this.head;
+   Link current = this.head;
+   
+   while(current.data != key)
+   {
+    if(current.next == null)
+     return null;
+    else
+     previous = current;
+     current = current.next;
+   }
+   
+   //check if the one to be deleted was the head
+   if(current.equals(head))
+    this.head = head.next;
+   else
+    previous.next = current.next;
+    
+   //return removed Link
+   return current; 
+ }
+} 
 ```
 
 
