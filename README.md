@@ -39,6 +39,7 @@ Algorithms in Java.
 * [FitCoding](http://www.fitcoding.com/)
 * [Algorithm Zone](http://algorithm.zone/)
 * [Project Euler](https://projecteuler.net)
+* [Technical Interview Questions](https://github.com/nadbm/technical_interview_questions)
 
 ## Books
 * [Algorithms Sedgewick](https://github.com/kasaquan/book/blob/master/Robert%20Sedgewick%20and%20Kevin%20Wayne%20-%20Algorithms,%204th%20edition.pdf)
