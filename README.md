@@ -39,6 +39,7 @@ Algorithms in Java.
 * [FitCoding](http://www.fitcoding.com/)
 * [Algorithm Zone](http://algorithm.zone/)
 * [Project Euler](https://projecteuler.net)
+* [Technical Interview Questions](https://github.com/nadbm/technical_interview_questions)
 
 ## Books
 * [Algorithms Sedgewick](https://github.com/kasaquan/book/blob/master/Robert%20Sedgewick%20and%20Kevin%20Wayne%20-%20Algorithms,%204th%20edition.pdf)
@@ -53,6 +54,92 @@ Algorithms in Java.
 * Arrays disadvantage: in an un-ordered array searching is slow and in an ordered array insertion is slow. Deletion is slow for un-ordered and ordered arrays. Also, the size of the array can't be changed after it's created.
 * Linked List solves this problem.
 * Linked Lists replace arrays as the basis structure for stacks and queues. That is why for the LRU Cache we use a linked list. If fact, you can use a linked list in many cases in which you would use an array, unless you need **frequent random access** to individual items using an index.
+
+```java
+class Link
+{
+ public int data;
+ public Link next;
+ 
+  public Link(int data)
+  {
+   this.data = data;
+  }
+}
+
+class LinkList
+{
+ private Link head;
+ 
+ public void LinkList()
+ {
+  head = null;
+ }
+ 
+ public  boolean isEmpty()
+ {
+  return (first==null);
+ }
+ 
+ public void insertFirst(int data)
+ {
+    Link newLink = new Link(data);	
+    newLink.next = head;
+    head = newLink;
+ }
+ 
+ public Link deleteFirst()
+ {
+  Link tmp = head;
+  head = head.next;
+  return tmp;
+ }
+ 
+ public Link find(int key)
+ {
+  Link current = null;
+  if(!this.isEmpty())
+  {
+   current = this.head;
+   while(current.data != key)
+   {
+    if(current.next == null)
+      return null;
+    else
+     current = current.next;
+   }
+  return current;
+  }
+ }
+ 
+ public Link delete(int key)
+ {
+   //previous and current have a reference to the Head
+   Link previous = this.head;
+   Link current = this.head;
+   
+   while(current.data != key)
+   {
+    if(current.next == null)
+     return null;
+    else
+     previous = current;
+     current = current.next;
+   }
+   
+   //check if the one to be deleted was the head
+   if(current.equals(head))
+    this.head = head.next;
+   else
+    previous.next = current.next;
+    
+   //return removed Link
+   return current; 
+ }
+} 
+```
+
+
 
 ##Trees
 * Provide both quick insertion and deletion of a linked list, and also the quick searching of an ordered array.
