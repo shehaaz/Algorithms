@@ -113,6 +113,10 @@ public class ExampleTest {
 		
 		fib = Example.fibonacci(36);
 		assertTrue(fib==14930352);
+		
+		fib = (int) Example.fibonacciDP(36);
+		assertTrue(fib==14930352);
+		
 	}
 
 }

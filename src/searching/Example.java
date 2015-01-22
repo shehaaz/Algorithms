@@ -150,6 +150,17 @@ public class Example {
 		return fibonacci(n-2) + fibonacci(n-1);
 	}
 	
-	
+	//Fibonacci using dynamic programming
+	static long fibonacciDP(int n) {
+	    long n0 = 0;
+	    long n1 = 1;
+	    long current = 0;
+	    for (int i = 2; i <= n; i++) {
+	        current = n0 + n1;
+	        n0 = n1;
+	        n1 = current;
+	    }
+	    return current;
+	}
 	
 }
