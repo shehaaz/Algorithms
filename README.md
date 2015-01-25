@@ -45,6 +45,7 @@ Algorithms in Java.
 * [Algorithms Sedgewick](https://github.com/kasaquan/book/blob/master/Robert%20Sedgewick%20and%20Kevin%20Wayne%20-%20Algorithms,%204th%20edition.pdf)
 * [Think Complexity](http://greenteapress.com/complexity/thinkcomplexity.pdf)
 * [Data Structures and Algorithms in Java](http://rineshpk.weebly.com/uploads/1/8/2/0/1820991/data_structures_and_algorithms_in_javatqw_darksiderg.pdf)
+* [Introduction to Dynamic Programming](http://www.javacodegeeks.com/2014/02/dynamic-programming-introduction.html)
 
 ## Controlling Access to Members of a Class
 ![](http://i.imgur.com/6CPMyGY.png)
