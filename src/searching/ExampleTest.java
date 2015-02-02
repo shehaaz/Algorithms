@@ -111,11 +111,12 @@ public class ExampleTest {
 		fib = Example.fibonacci(-7);
 		assertTrue(fib==0);
 		
-		fib = Example.fibonacci(36);
-		assertTrue(fib==14930352);
+		//Slow
+		fib = Example.fibonacci(46);
+		assertTrue(fib==1836311903);
 		
-		fib = (int) Example.fibonacciDP(36);
-		assertTrue(fib==14930352);
+		fib = (int) Example.fibonacciDP(46);
+		assertTrue(fib==1836311903);
 		
 	}
 

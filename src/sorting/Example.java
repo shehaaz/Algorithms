@@ -1,5 +1,8 @@
 package sorting;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Example {
 
 	/**
@@ -28,5 +31,50 @@ public class Example {
 		intArray[i] = intArray[j];
 		intArray[j] = tmp;
 	}
+	
+	//find the largest int in an array
+	static int findLargest(int[] a)
+	{
+		int largest = a[0];
+		
+		for (int i=1; i<a.length; i++)
+		{
+			largest = (largest > a[i]) ? largest : a[i];
+		}
+		
+		return largest;
+	}
+	
+	//find the most frequent int in an array
+	static int mostFreq(int[] a)
+	{
+		final Map<Integer, Integer> holder = new HashMap<Integer,Integer>();
+		int key = Integer.MIN_VALUE;
+		int count = 0;
+		
+		for(int i=0; i<a.length; i++)
+		{
+			if(!holder.containsKey(a[i]))
+			{
+				//add new key
+				holder.put(a[i], 1);
+			}
+			else
+			{
+				//increment the count then add key
+				holder.put(a[i], holder.get(a[i])+1);
+			}
+			
+			if(count < holder.get(a[i]))
+			{
+				key = a[i];
+				count = holder.get(a[i]);
+			}
+		}
+		
+		return key;
+	}
+	
+	
 	
 }
