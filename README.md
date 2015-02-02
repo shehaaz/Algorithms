@@ -150,3 +150,13 @@ class LinkList
 * A Binary Search Tree: A node's **left** child has key less than its parent, and **right** child must have a key greater than or equal to its parent.
 * un-balanced trees: One side of the parent has more nodes than the other. For example, when a data-entry person arranges a stack of personnel files into order of ascending employee number before entering the data. When this happens, tree efficiency can be seriously degraded. What to do about it? A red–black tree is a data structure which is a type of self-balancing binary search tree
 
+##[HashSet vs. HashMap](http://stackoverflow.com/questions/5689517/java-hashset-vs-hashmap)
+* HashSet stores unique keys and HashMap stores key-value pairs
+* HashSet uses HashMap underneath
+```java
+HashSet.add(object){
+ map.put(object, DUMMY);
+ }
+private static final Object DUMMY = new Object();
+```
+
