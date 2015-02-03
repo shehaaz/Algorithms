@@ -2,9 +2,13 @@ package searching;
 
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import org.junit.Test;
+
+import searching.Example.Pair;
 
 public class ExampleTest {
 
@@ -112,12 +116,29 @@ public class ExampleTest {
 		assertTrue(fib==0);
 		
 		//Slow
-		fib = Example.fibonacci(46);
-		assertTrue(fib==1836311903);
+//		fib = Example.fibonacci(46);
+//		assertTrue(fib==1836311903);
 		
 		fib = (int) Example.fibonacciDP(46);
 		assertTrue(fib==1836311903);
 		
+	}
+	
+	@Test
+	public void testFindPairs()
+	{
+		int[] a = {3,6,5,5,7,1,16,24,11,4,-6};
+		int target = 10;
+		
+		List<Pair<Integer, Integer>> actual = Example.findPairs(a, target);
+		
+		List<Pair<Integer, Integer>> expected = new ArrayList<Pair<Integer,Integer>>();
+		expected.add(Pair.createPair(5, 5));
+		expected.add(Pair.createPair(7, 3));
+		expected.add(Pair.createPair(6, 4));
+		expected.add(Pair.createPair(-6, 16));
+		
+		assertEquals(expected, actual);
 	}
 
 }

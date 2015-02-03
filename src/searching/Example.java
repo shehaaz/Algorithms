@@ -1,10 +1,13 @@
 package searching;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import graphs.Tree;
 import graphs.Tree.Node;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Objects;
+import java.util.Set;
 
 
 public class Example {
@@ -117,6 +120,79 @@ public class Example {
 		}
 		
 		return result;
+	}
+	
+	/*
+	 * Find pairs in an integer array whose sum is equal to 10 
+	 */
+	static List<Pair<Integer, Integer>> findPairs(int[] a, int target)
+	{	
+		List<Pair<Integer, Integer>> result = new ArrayList<Pair<Integer, Integer>>();
+		
+		//working memory
+		Set<Integer> holder = new HashSet<Integer>();
+		
+		for(int i=0; i<a.length; i++)
+		{
+		  int diff = target - a[i];
+		  
+		  if(holder.contains(diff))
+		  {
+			  result.add(Pair.createPair(a[i], diff));
+			  holder.remove(diff);
+		  }
+		  else
+		  {
+			  holder.add(a[i]);
+		  }
+		}
+		
+		return result;
+	}
+	
+	public static class Pair<K, V> 
+	{
+
+	    private final K element0;
+	    private final V element1;
+
+	    public static <K, V> Pair<K, V> createPair(K element0, V element1) {
+	        return new Pair<K, V>(element0, element1);
+	    }
+	    
+	    private Pair(K element0, V element1) {
+	        this.element0 = element0;
+	        this.element1 = element1;
+	    }
+
+	    public K getElement0() {
+	        return element0;
+	    }
+
+	    public V getElement1() {
+	        return element1;
+	    }
+	    
+	    @Override
+	    public boolean equals(Object o)
+	    {
+    	   if ( !(o instanceof Example.Pair<?,?>) ) 
+    	   {
+               return false;
+           }
+    	   
+           return Objects.equals(((Example.Pair<?,?>)o).getElement0(), this.getElement0())
+                   && Objects.equals(((Example.Pair<?,?>)o).getElement1(), this.getElement1())
+                   ||Objects.equals(((Example.Pair<?,?>)o).getElement0(), this.getElement1())
+                   && Objects.equals(((Example.Pair<?,?>)o).getElement1(), this.getElement0());
+	    }
+	    
+	    @Override
+	    public int hashCode()
+	    {
+	    	return com.google.common.base.Objects.hashCode(this.element0, this.element1);
+	    }
+
 	}
 	
 	/**

@@ -129,4 +129,24 @@ public class Example {
 		return "";
 	}
 	
+	/*
+	 * Implement an algorithm to determine if a string has all unique characters. 
+	 * What if you cannot use additional data structures?
+	 */
+	static boolean uniqueString(String s)
+	{
+		for(int i=0; i<s.length(); i++)
+		{
+			for(int j=i+1; j<s.length(); j++)
+			{
+				if(s.charAt(j) == s.charAt(i))
+				{
+					return false;
+				}
+			}
+		}
+		
+		return true;
+	}
+	
 }

@@ -93,5 +93,15 @@ public class ExampleTest {
 		assertTrue(Example.longestPalindromInsideString("example").isEmpty());
 		
 	}
+	
+	@Test
+	public void testUniqueString()
+	{
+		String s = "abcde";
+		assertTrue(Example.uniqueString(s));
+		
+		s = "abbcde";
+		assertFalse(Example.uniqueString(s));
+	}
 
 }
