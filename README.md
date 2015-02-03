@@ -24,6 +24,7 @@ Algorithms in Java.
 # Awesome Resources
 
 ## Problems and blog posts
+* [Top 10 Algorithms](http://www.programcreek.com/2012/11/top-10-algorithms-for-coding-interview/)
 * [The Five Essential Phone-Screen Questions](https://sites.google.com/site/steveyegge2/five-essential-phone-screen-questions)
 * [collection of data structure and algorithm questions](http://www.dsalgo.com/2013/02/index.php.html?m=1)
 * [TLDR Interviews](https://docs.google.com/document/d/116s-IXQFsf6FNaPsc2jFXs_1wTJzemh1QNA7KVSaoII/edit)
