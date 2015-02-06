@@ -101,7 +101,17 @@ public class ExampleTest {
 		assertTrue(Example.uniqueString(s));
 		
 		s = "abbcde";
-		assertFalse(Example.uniqueString(s));
+		assertFalse(Example.uniqueStringHashSet(s));
+	}
+	
+	@Test
+	public void testStack()
+	{
+		String[] tokens = new String[] {"4", "13", "5", "/", "+"};
+		int actual = Example.stack(tokens);
+		int expected = 6;
+		
+		assertEquals(actual, expected);
 	}
 
 }

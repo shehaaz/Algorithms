@@ -8,6 +8,7 @@ import java.util.List;
 
 import org.junit.Test;
 
+import searching.Example.Iter;
 import searching.Example.Pair;
 
 public class ExampleTest {
@@ -139,6 +140,19 @@ public class ExampleTest {
 		expected.add(Pair.createPair(-6, 16));
 		
 		assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void testtoIterator()
+	{
+		String[] s = {"h","e","l","l","o"};
+		Iter iter = Example.toIterator(s);
+		System.out.println(iter.next());
+		System.out.println(iter.next());
+		System.out.println(iter.next());
+		System.out.println(iter.next());
+		System.out.println(iter.next());
+		System.out.println(iter.next());
 	}
 
 }

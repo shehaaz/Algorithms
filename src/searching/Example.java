@@ -7,7 +7,9 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
+import java.util.Queue;
 import java.util.Set;
+import java.util.concurrent.LinkedBlockingQueue;
 
 
 public class Example {
@@ -237,6 +239,39 @@ public class Example {
 	        n1 = current;
 	    }
 	    return current;
+	}
+	
+	static Iter toIterator(Object[] a)
+	{
+	  return new Iter(a);
+	}
+
+
+	public static class Iter
+	{
+
+	//Fifo
+	Queue<Object> q = new LinkedBlockingQueue<Object>();
+	 
+	public Iter(Object[] a)
+	{
+	  for(int i=0; i<a.length; i++)
+	   {
+		 q.add(a[i]);
+	   }
+	}
+
+	public Object next()
+	{
+	  if(q.size() == 0)
+	   {
+	     return null;
+	   }
+	  else
+	  {
+	   return q.poll();
+	  }
+	 }
 	}
 	
 }

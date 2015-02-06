@@ -1,5 +1,9 @@
 package stringManipulation;
 
+import java.util.HashSet;
+import java.util.Set;
+import java.util.Stack;
+
 
 public class Example {
 
@@ -147,6 +151,58 @@ public class Example {
 		}
 		
 		return true;
+	}
+	
+	static boolean uniqueStringHashSet(String s)
+	{
+		Set<Character> set = new HashSet<Character>();
+		
+		for(int i=0; i<s.length(); i++)
+		{
+			set.add(s.charAt(i));
+		}
+		
+		return (set.size() != s.length()) ? false : true;
+	}
+	
+	static int stack(String[] tokens)
+	{
+		int returnValue = 0;
+		String operators = "+-*/";
+ 
+		Stack<String> stack = new Stack<String>();
+ 
+		for (String t : tokens) 
+		{
+			if (!operators.contains(t)) 
+			{
+				stack.push(t);
+			} 
+			else 
+			{
+				int a = Integer.valueOf(stack.pop());
+				int b = Integer.valueOf(stack.pop());
+				switch (t) 
+				{
+				case "+":
+					stack.push(String.valueOf(a + b));
+					break;
+				case "-":
+					stack.push(String.valueOf(b - a));
+					break;
+				case "*":
+					stack.push(String.valueOf(a * b));
+					break;
+				case "/":
+					stack.push(String.valueOf(b / a));
+					break;
+				}
+			}
+		}
+ 
+		returnValue = Integer.valueOf(stack.pop());
+ 
+		return returnValue;
 	}
 	
 }
