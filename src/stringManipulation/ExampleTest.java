@@ -113,5 +113,14 @@ public class ExampleTest {
 		
 		assertEquals(actual, expected);
 	}
+	
+	@Test
+	public void testAnagram()
+	{
+		String s1 = "iceman";
+		String s2 = "cinema";
+		
+		assertTrue(Example.isAnagram(s1, s2));
+	}
 
 }
