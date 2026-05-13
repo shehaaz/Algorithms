@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pathfinding &middot; Algorithm Visualizer</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav class="nav">
+    <a class="brand" href="./index.html">
+      <span class="logo" aria-hidden="true"></span>
+      <span>Algorithm Visualizer</span>
+    </a>
+    <div class="links">
+      <a href="./sorting.html">Sorting</a>
+      <a href="./searching.html">Searching</a>
+      <a class="active" href="./pathfinding.html">Pathfinding</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h1 class="section-title">Pathfinding &amp; Graph Traversal</h1>
+    <p class="section-sub">Click or drag on the grid to draw walls. Drag the green start or pink end cell to move them. Then run a traversal.</p>
+
+    <div class="controls">
+      <label>
+        Algorithm
+        <select id="algo">
+          <option value="bfs">Breadth-First Search</option>
+          <option value="dfs">Depth-First Search</option>
+          <option value="dijkstra">Dijkstra</option>
+        </select>
+      </label>
+
+      <label>
+        Cols
+        <input id="cols" type="range" min="10" max="50" value="32">
+        <span id="colsVal">32</span>
+      </label>
+
+      <label>
+        Rows
+        <input id="rows" type="range" min="6" max="30" value="18">
+        <span id="rowsVal">18</span>
+      </label>
+
+      <label>
+        Speed
+        <input id="speed" type="range" min="1" max="100" value="80">
+      </label>
+
+      <button class="btn" id="clear">Clear walls</button>
+      <button class="btn" id="random">Random maze</button>
+      <button class="btn primary" id="run">Run</button>
+      <button class="btn danger" id="stop" disabled>Stop</button>
+    </div>
+
+    <section class="stage">
+      <div id="board" class="grid-board" aria-label="pathfinding grid"></div>
+      <div class="legend">
+        <span><span class="dot" style="background:#16a34a"></span>start</span>
+        <span><span class="dot" style="background:#db2777"></span>end</span>
+        <span><span class="dot" style="background:#0a0f24;border:1px solid #2a3563"></span>wall</span>
+        <span><span class="dot" style="background:#2563eb"></span>frontier</span>
+        <span><span class="dot" style="background:#1e3a8a"></span>visited</span>
+        <span><span class="dot" style="background:#facc15"></span>shortest path</span>
+      </div>
+      <div class="stats">
+        <span class="stat">Visited<b id="visited">0</b></span>
+        <span class="stat">Path length<b id="path">&mdash;</b></span>
+        <span class="stat">Status<b id="status">idle</b></span>
+      </div>
+    </section>
+
+    <section class="info">
+      <h3 id="info-title">Breadth-First Search</h3>
+      <p id="info-desc"></p>
+      <div class="complexity" id="info-complexity"></div>
+    </section>
+  </main>
+
+  <footer class="footer">Algorithm Visualizer &middot; pathfinding</footer>
+
+  <script src="js/pathfinding.js"></script>
+</body>
+</html>

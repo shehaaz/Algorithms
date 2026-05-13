@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Searching &middot; Algorithm Visualizer</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav class="nav">
+    <a class="brand" href="./index.html">
+      <span class="logo" aria-hidden="true"></span>
+      <span>Algorithm Visualizer</span>
+    </a>
+    <div class="links">
+      <a href="./sorting.html">Sorting</a>
+      <a class="active" href="./searching.html">Searching</a>
+      <a href="./pathfinding.html">Pathfinding</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h1 class="section-title">Searching Algorithms</h1>
+    <p class="section-sub">A sorted array of values. Pick a target and run linear or binary search. Yellow bars show inspected indices, the cyan underline marks <i>mid</i>, faded bars are pruned, and green is the hit.</p>
+
+    <div class="controls">
+      <label>
+        Algorithm
+        <select id="algo">
+          <option value="linear">Linear Search</option>
+          <option value="binary" selected>Binary Search</option>
+        </select>
+      </label>
+
+      <label>
+        Size
+        <input id="size" type="range" min="8" max="60" value="24">
+        <span id="sizeVal">24</span>
+      </label>
+
+      <label>
+        Target
+        <input id="target" type="number" min="0" max="99" value="">
+      </label>
+
+      <label>
+        Speed
+        <input id="speed" type="range" min="1" max="100" value="50">
+      </label>
+
+      <button class="btn" id="shuffle">New Array</button>
+      <button class="btn primary" id="run">Search</button>
+      <button class="btn danger" id="stop" disabled>Stop</button>
+    </div>
+
+    <section class="stage">
+      <div class="canvas-wrap">
+        <div class="bars search-bars" id="bars"></div>
+        <div class="search-labels" id="labels"></div>
+      </div>
+      <div class="legend">
+        <span><span class="dot default"></span>candidate</span>
+        <span><span class="dot compare"></span>inspecting</span>
+        <span><span class="dot sorted"></span>found</span>
+      </div>
+      <div class="stats">
+        <span class="stat">Steps<b id="steps">0</b></span>
+        <span class="stat">Range<b id="range">&mdash;</b></span>
+        <span class="stat">Status<b id="status">idle</b></span>
+      </div>
+    </section>
+
+    <section class="info">
+      <h3 id="info-title">Binary Search</h3>
+      <p id="info-desc"></p>
+      <div class="complexity" id="info-complexity"></div>
+    </section>
+  </main>
+
+  <footer class="footer">Algorithm Visualizer &middot; searching</footer>
+
+  <script src="js/searching.js"></script>
+</body>
+</html>

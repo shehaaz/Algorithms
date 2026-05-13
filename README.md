@@ -1,23 +1,46 @@
 Algorithms
 ==========
 
-Algorithms in Java.
+Algorithms in Java &mdash; with a companion **interactive visualization site** hosted on GitHub Pages.
 
-1. Graphs
- 	* Java Tree Example 
+## Live visualizer
 
-2. Searching
-	* linearSearch
-	* binarySearch
-	* twoSum e.g: Input: {2,7,11,1} 18 -> Output: [2,3]
-	* Fibonacci Recursively/Dynamic Programming
+The repository ships with a static web app under `index.html`, `css/`, and `js/`. It runs
+entirely in the browser (no build step, no framework) and animates each algorithm
+step-by-step.
 
-3. Sorting
-	* bubbleSort	 	
+* **Sorting** &mdash; Bubble, Insertion, Selection, Merge, Quick (`sorting.html`)
+* **Searching** &mdash; Linear, Binary (`searching.html`)
+* **Pathfinding & graph traversal** &mdash; BFS, DFS, Dijkstra on a grid you can draw walls on (`pathfinding.html`)
 
-4. String Manipulation
-  * reverseString
-  * Find the longest palindrome in a String (Recursively)
+### Run it locally
+
+```bash
+# any static file server works; here are two options:
+python3 -m http.server 8000
+# then open http://localhost:8000
+
+# or
+npx serve .
+```
+
+### Publish on GitHub Pages
+
+A workflow is included at `.github/workflows/pages.yml` that publishes the site on every
+push to `master`/`main`. To enable it:
+
+1. Go to **Settings &rarr; Pages** in the GitHub repository.
+2. Under **Source**, select **GitHub Actions**.
+3. Push to `master`; the workflow will deploy and print the URL.
+
+## Java sources
+
+The original Java implementations remain under `src/`:
+
+1. Graphs &mdash; Java Tree example
+2. Searching &mdash; linearSearch, binarySearch, twoSum, Fibonacci (recursive / DP)
+3. Sorting &mdash; bubbleSort
+4. String Manipulation &mdash; reverseString, longest palindrome (recursive)
 
 
 
