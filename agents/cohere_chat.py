@@ -13,6 +13,15 @@ def build_client() -> cohere.ClientV2:
     return cohere.ClientV2(api_key=api_key)
 
 
+def get_response(client: cohere.ClientV2, model: str, message: str, history=None) -> str:
+    history = history if history is not None else []
+    history.append({"role": "user", "content": message})
+    response = client.chat(model=model, messages=history)
+    reply = response.message.content[0].text
+    history.append({"role": "assistant", "content": reply})
+    return reply
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Local chat REPL backed by Cohere.")
     parser.add_argument(
@@ -38,11 +47,8 @@ def main() -> None:
         if user_input.lower() in ("exit", "quit"):
             break
 
-        history.append({"role": "user", "content": user_input})
-        response = client.chat(model=args.model, messages=history)
-        reply = response.message.content[0].text
+        reply = get_response(client, args.model, user_input, history)
         print(f"agent> {reply}")
-        history.append({"role": "assistant", "content": reply})
 
 
 if __name__ == "__main__":

@@ -1,1 +1,3 @@
 cohere>=5.0.0
+openevals>=0.0.11
+langchain_cohere>=0.3.0

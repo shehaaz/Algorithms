@@ -26,3 +26,15 @@ python cohere_chat.py
 
 Use `--model` or the `COHERE_MODEL` env var to try a different Cohere model (default:
 `command-r-plus`). Type `exit` or `quit` to leave the REPL.
+
+## Evaluating responses
+
+`eval_cohere.py` checks the agent's answers against a small set of reference answers using
+[OpenEvals](https://github.com/langchain-ai/openevals)' correctness evaluator, with Cohere
+itself acting as the judge (no LangSmith account or extra API key needed):
+
+```bash
+python eval_cohere.py
+```
+
+It prints a score and comment per case and exits non-zero if any case fails.
